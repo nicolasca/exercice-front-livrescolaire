@@ -1,0 +1,32 @@
+.studentList ul {
+  list-style-type: none;
+}
+
+.studentList li {
+  text-align: left;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sign {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.plusSign:hover {
+  cursor: pointer;
+  background-color: rgb(134, 224, 134);
+}
+
+.minusSign:hover {
+  cursor: pointer;
+  background-color: rgb(228, 72, 72);
+}

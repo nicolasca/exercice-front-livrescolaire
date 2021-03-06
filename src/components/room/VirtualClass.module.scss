@@ -1,0 +1,21 @@
+.room {
+  width: 75%;
+}
+
+.studentsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.studentCard {
+  padding: 2rem;
+  margin: 0.1rem;
+  border: 2px solid blue;
+}
+
+.studentCard:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  // color: white;
+  background-color: rgb(215, 241, 243);
+}
