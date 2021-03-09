@@ -17,8 +17,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/curtain-theater-1.png);
-  // background-image: url(../../images/theater-stage.png);
-  background-color: tan;
+  background-color: #f5d4a7;
   border-radius: 1rem;
 
   display: flex;
@@ -28,11 +27,6 @@
 
 .teacher img {
   max-width: 270px;
-}
-
-.studentCard {
-  padding: 2rem;
-  border: 2px solid blue;
 }
 
 .studentList {

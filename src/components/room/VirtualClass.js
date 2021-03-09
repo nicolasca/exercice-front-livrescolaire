@@ -3,6 +3,7 @@ import classes from "./VirtualClass.module.scss";
 import { useOvermind } from "../../overmind";
 import Student from "../students/StudentForm";
 import Modal from "../layout/Modal";
+import AttendingStudent from "./AttendingStudent";
 
 function VirtualClass() {
   const {
@@ -23,9 +24,7 @@ function VirtualClass() {
           </div>
           {state.students.map((student) => {
             return student.isAttending ? (
-              <div key={student.id} className={classes.studentCard}>
-                {student.firstName} {student.lastName}
-              </div>
+              <AttendingStudent student={student} />
             ) : null;
           })}
         </div>
