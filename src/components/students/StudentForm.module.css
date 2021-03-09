@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 12px;
+}
+
+button:disabled {
+  background: grey;
+}
+
+.error {
+  color: rgb(187, 68, 68);
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.buttonSave {
+  color: rgb(245, 245, 245);
+  background: rgb(72, 156, 72);
+  margin-top: 10px;
+}

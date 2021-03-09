@@ -1,0 +1,59 @@
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student > span {
+  margin-right: 1rem;
+}
+
+.actions {
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.actions > div {
+  margin-right: 1rem;
+}
+
+.actions svg {
+  width: 20px;
+  height: 20px;
+}
+
+.actions .minusSign svg {
+  cursor: pointer;
+  fill: rgb(228, 72, 72);
+}
+
+.actions .plusSign svg {
+  cursor: pointer;
+  fill: rgb(134, 224, 134);
+}
+
+.actions .editSign svg {
+  cursor: pointer;
+  fill: rgb(72, 140, 228);
+}
+
+.actions svg:hover {
+  filter: brightness(0.6);
+}
+
+.student:hover .actions {
+  visibility: visible;
+}
+
+.sign {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}

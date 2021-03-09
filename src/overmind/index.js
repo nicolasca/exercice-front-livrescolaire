@@ -3,10 +3,11 @@ import { createHook } from "overmind-react";
 export const config = {
   state: {
     students: [],
+    displayStudentForm: null,
   },
   actions: {
     // Initialize the list of all the students.
-    // For the purpose of the demo, all of them are set attending
+    // For the purpose of the demo, half of them are set attending
     // to avoid to add them all by hand in the interface
     setAllStudents({ state }, studentsToAdd) {
       const halfArray = Math.floor(studentsToAdd.length / 2);
@@ -36,8 +37,15 @@ export const config = {
         if (student.id === studentNewInformation.id) {
           student.firstName = studentNewInformation.firstName;
           student.lastName = studentNewInformation.lastName;
+          student.email = studentNewInformation.email;
         }
       });
+    },
+    setDisplayStudentForm({ state }, studentToDisplay) {
+      // This strange set is because overmind a special rule for the state tree path, that can throw a Error: proxy-state-tree
+      state.displayStudentForm = studentToDisplay
+        ? { ...studentToDisplay }
+        : null;
     },
   },
 };

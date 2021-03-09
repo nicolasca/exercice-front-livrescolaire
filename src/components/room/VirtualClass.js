@@ -1,42 +1,57 @@
-import ConnectedStudents from "../students/StudentList";
+import StudentList from "../students/StudentList";
+import { useState } from "react";
 import classes from "./VirtualClass.module.scss";
 import { useOvermind } from "../../overmind";
-import Student from "../students/Student";
-import { useState } from "react";
+import Student from "../students/StudentForm";
 import Modal from "../layout/Modal";
 
 function VirtualClass() {
-  const { state } = useOvermind();
-  const [displayStudent, setDisplayStudent] = useState(null);
+  const [studentListOpen, setStudentListOpen] = useState(false);
+
+  const {
+    state,
+    actions: { setDisplayStudentForm },
+  } = useOvermind();
 
   return (
     <>
       <div className={classes.room}>
-        <div className={classes.displayTeacherStudents}>
+        <button
+          onClick={() => {
+            setStudentListOpen(!studentListOpen);
+          }}
+        >
+          Open
+        </button>
+        <div
+          className={`${classes.displayTeacherStudents} ${
+            studentListOpen ? classes.open : classes.close
+          }`}
+        >
           <div className={classes.teacher}></div>
           {state.students.map((student) => {
             return student.isAttending ? (
-              <div
-                key={student.id}
-                className={classes.studentCard}
-                onClick={() => setDisplayStudent(student)}
-              >
+              <div key={student.id} className={classes.studentCard}>
                 {student.firstName} {student.lastName}
               </div>
             ) : null;
           })}
         </div>
-        {displayStudent && (
-          <Modal handleClose={() => setDisplayStudent(null)}>
+        {state.displayStudentForm && (
+          <Modal handleClose={() => setDisplayStudentForm(null)}>
             <Student
-              saveStudent={() => setDisplayStudent(null)}
-              student={displayStudent}
+              saveStudent={() => setDisplayStudentForm(null)}
+              student={state.displayStudentForm}
             />
           </Modal>
         )}
       </div>
-      <div>
-        <ConnectedStudents />
+      <div
+        className={`${classes.studentList} ${
+          studentListOpen ? classes.open : classes.close
+        }`}
+      >
+        <StudentList />
       </div>
     </>
   );
