@@ -5,7 +5,11 @@ function Modal({ handleClose, children }) {
     <div className={classes.modal}>
       <section className={classes.modalMain}>
         {children}
-        <button type="button" onClick={handleClose}>
+        <button
+          className={classes.closeButton}
+          type="button"
+          onClick={handleClose}
+        >
           Close
         </button>
       </section>
