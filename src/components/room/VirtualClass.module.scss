@@ -2,20 +2,25 @@
   width: 75%;
 }
 
-.studentsList {
-  display: flex;
-  flex-wrap: wrap;
+.displayTeacherStudents {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 3fr 1fr;
+  column-gap: 0.1rem;
+  row-gap: 0.2rem;
+}
+
+.teacher {
+  grid-column: 1 / span 6;
+  grid-row: 1 / 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/curtain-theater-1.png);
+  background-color: tan;
+  border-radius: 1rem;
 }
 
 .studentCard {
   padding: 2rem;
-  margin: 0.1rem;
   border: 2px solid blue;
-}
-
-.studentCard:hover {
-  cursor: pointer;
-  border: 2px solid black;
-  // color: white;
-  background-color: rgb(215, 241, 243);
 }

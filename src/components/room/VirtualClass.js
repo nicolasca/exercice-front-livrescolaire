@@ -12,8 +12,8 @@ function VirtualClass() {
   return (
     <>
       <div className={classes.room}>
-        <h2>Prof et élèves</h2>
-        <div className={classes.studentsList}>
+        <div className={classes.displayTeacherStudents}>
+          <div className={classes.teacher}></div>
           {state.students.map((student) => {
             return student.isAttending ? (
               <div
@@ -28,7 +28,10 @@ function VirtualClass() {
         </div>
         {displayStudent && (
           <Modal handleClose={() => setDisplayStudent(null)}>
-            <Student student={displayStudent} />
+            <Student
+              saveStudent={() => setDisplayStudent(null)}
+              student={displayStudent}
+            />
           </Modal>
         )}
       </div>
