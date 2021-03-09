@@ -4,6 +4,7 @@ export const config = {
   state: {
     students: [],
     displayStudentForm: null,
+    isStudentListOpen: false,
   },
   actions: {
     // Initialize the list of all the students.
@@ -46,6 +47,9 @@ export const config = {
       state.displayStudentForm = studentToDisplay
         ? { ...studentToDisplay }
         : null;
+    },
+    setStudentListOpen({ state }, isOpen) {
+      state.isStudentListOpen = isOpen;
     },
   },
 };

@@ -6,7 +6,7 @@
   transition: all 1s;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 50vh 100px;
   column-gap: 0.1rem;
   row-gap: 0.2rem;
 }
@@ -17,8 +17,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/curtain-theater-1.png);
+  // background-image: url(../../images/theater-stage.png);
   background-color: tan;
   border-radius: 1rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.teacher img {
+  max-width: 270px;
 }
 
 .studentCard {

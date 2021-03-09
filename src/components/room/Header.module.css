@@ -1,0 +1,24 @@
+.headerClass {
+  display: flex;
+  align-items: center;
+}
+
+.iconStudents {
+  margin-left: auto;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+
+.headerClass svg {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.headerClass .iconStudents:hover {
+  filter: grayscale(0%);
+}
+
+.headerClass .open.iconStudents {
+  filter: grayscale(0%);
+}

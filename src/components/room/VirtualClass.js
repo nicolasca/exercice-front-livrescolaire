@@ -1,13 +1,10 @@
 import StudentList from "../students/StudentList";
-import { useState } from "react";
 import classes from "./VirtualClass.module.scss";
 import { useOvermind } from "../../overmind";
 import Student from "../students/StudentForm";
 import Modal from "../layout/Modal";
 
 function VirtualClass() {
-  const [studentListOpen, setStudentListOpen] = useState(false);
-
   const {
     state,
     actions: { setDisplayStudentForm },
@@ -16,19 +13,14 @@ function VirtualClass() {
   return (
     <>
       <div className={classes.room}>
-        <button
-          onClick={() => {
-            setStudentListOpen(!studentListOpen);
-          }}
-        >
-          Open
-        </button>
         <div
           className={`${classes.displayTeacherStudents} ${
-            studentListOpen ? classes.open : classes.close
+            state.isStudentListOpen ? classes.open : classes.close
           }`}
         >
-          <div className={classes.teacher}></div>
+          <div className={classes.teacher}>
+            <img src="./assets/teacher.png" alt="Professeur" />
+          </div>
           {state.students.map((student) => {
             return student.isAttending ? (
               <div key={student.id} className={classes.studentCard}>
@@ -48,7 +40,7 @@ function VirtualClass() {
       </div>
       <div
         className={`${classes.studentList} ${
-          studentListOpen ? classes.open : classes.close
+          state.isStudentListOpen ? classes.open : classes.close
         }`}
       >
         <StudentList />

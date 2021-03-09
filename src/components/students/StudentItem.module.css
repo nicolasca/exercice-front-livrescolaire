@@ -1,7 +1,7 @@
 .student {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .student > span {
@@ -11,7 +11,7 @@
 .actions {
   visibility: hidden;
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   flex-grow: 1;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .actions svg:hover {
-  filter: brightness(0.6);
+  filter: brightness(0.8);
 }
 
 .student:hover .actions {

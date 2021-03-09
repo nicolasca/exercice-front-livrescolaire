@@ -14,9 +14,6 @@ function StudentItem({ student }) {
         {student.firstName} {student.lastName}{" "}
       </span>
       <div className={classes.actions}>
-        <div className={classes.editSign}>
-          <EditSign onClick={() => setDisplayStudentForm(student)} />
-        </div>
         {student.isAttending ? (
           <div
             className={classes.minusSign}
@@ -29,6 +26,9 @@ function StudentItem({ student }) {
             <PlusSign onClick={() => addStudent(student)} />
           </div>
         )}
+        <div className={classes.editSign}>
+          <EditSign onClick={() => setDisplayStudentForm(student)} />
+        </div>
       </div>
     </div>
   );

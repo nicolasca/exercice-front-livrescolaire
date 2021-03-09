@@ -1,11 +1,10 @@
 import classes from "./Layout.module.css";
+import Header from "../room/Header";
 
 function Layout(props) {
   return (
     <div className={classes.container}>
-      <header>
-        <h1>Classe de théâtre en ligne</h1>
-      </header>
+      <Header />
       <main className={classes.main}>{props.children}</main>
     </div>
   );
