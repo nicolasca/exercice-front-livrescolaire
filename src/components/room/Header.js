@@ -17,6 +17,7 @@ function Header() {
           state.isStudentListOpen ? classes.open : ""
         }`}
       >
+        {/* In charge of opening/closing the sidebar student list */}
         <IconStudents
           onClick={() => setStudentListOpen(!state.isStudentListOpen)}
         />

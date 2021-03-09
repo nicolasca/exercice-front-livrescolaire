@@ -1,5 +1,6 @@
 import classes from "./Attending.module.css";
 
+// Show an attending student as a card in the room. It displays an image with the name
 function AttendingStudent({ student }) {
   return (
     <div key={student.id} className={classes.studentCard}>

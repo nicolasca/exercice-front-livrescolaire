@@ -4,7 +4,9 @@ import { useOvermind } from "../../overmind";
 import classes from "./StudentList.module.css";
 import StudentItem from "./StudentItem";
 
-function StudentList(props) {
+// The student list sidebar, displaying all the connected students, and showing
+// the ones attending the class and the ones not attending.
+function StudentList() {
   const {
     state,
     actions: { setAllStudents },

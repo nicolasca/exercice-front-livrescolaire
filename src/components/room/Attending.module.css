@@ -1,3 +1,5 @@
+/* Simple student card, with image at the top and name at the bottom */
+
 .studentCard {
   display: flex;
   align-items: center;

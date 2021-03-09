@@ -4,6 +4,8 @@ import { ReactComponent as MinusSign } from "../../images/minus-sign.svg";
 import { ReactComponent as EditSign } from "../../images/edit.svg";
 import classes from "./StudentItem.module.css";
 
+// Represents a line in the student list sidebar.
+// Display the name with some actions (add or remove from the class, and edit the student information)
 function StudentItem({ student }) {
   const {
     actions: { setDisplayStudentForm, addStudent, removeStudent },

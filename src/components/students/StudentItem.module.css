@@ -1,7 +1,6 @@
 .student {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .student > span {
@@ -11,7 +10,6 @@
 .actions {
   visibility: hidden;
   display: flex;
-  /* justify-content: flex-end; */
   flex-grow: 1;
 }
 

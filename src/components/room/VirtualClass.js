@@ -5,6 +5,8 @@ import Student from "../students/StudentForm";
 import Modal from "../layout/Modal";
 import AttendingStudent from "./AttendingStudent";
 
+// Contains all the content of the virtual class: the teacher image, the attending students images, and the
+// student list sidebar to perform actions
 function VirtualClass() {
   const {
     state,
@@ -20,6 +22,7 @@ function VirtualClass() {
           }`}
         >
           <div className={classes.teacher}>
+            {/* This image is not the best, but at least showing some acting */}
             <img src="./assets/teacher.png" alt="Professeur" />
           </div>
           {state.students.map((student) => {

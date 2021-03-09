@@ -2,6 +2,8 @@
   width: 100%;
 }
 
+// Grid is used to display the teacher and students image (or stream video in theory)
+// The main focus and space is given to the teacher as anyone can have a good view.
 .displayTeacherStudents {
   transition: all 1s;
   display: grid;

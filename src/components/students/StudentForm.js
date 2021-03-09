@@ -2,11 +2,13 @@ import classes from "./StudentForm.module.css";
 import { useFormik } from "formik";
 import { useOvermind } from "../../overmind";
 
+// Form containing basic information about the student. It's possible to edit and save.
 function Student({ saveStudent, student }) {
   const {
     actions: { editStudent },
   } = useOvermind();
 
+  // Form validation with the setting of the required fields
   const validate = (values) => {
     const errors = {};
     if (!values.lastName) {
