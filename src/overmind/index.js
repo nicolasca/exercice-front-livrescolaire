@@ -1,5 +1,6 @@
 import { createHook } from "overmind-react";
 
+// Application state. Manage the students list, the display of the modal, and the menu
 export const config = {
   state: {
     students: [],
@@ -16,8 +17,6 @@ export const config = {
         studentsToAdd[i].isAttending = true;
       }
       state.students = studentsToAdd;
-      // state.attendingStudents = students.slice(0, halfArray);
-      // state.nonAttendingStudents = students.slice(halfArray);
     },
     addStudent({ state }, studentToAdd) {
       state.students.forEach((student) => {
@@ -43,7 +42,7 @@ export const config = {
       });
     },
     setDisplayStudentForm({ state }, studentToDisplay) {
-      // This strange set is because overmind a special rule for the state tree path, that can throw a Error: proxy-state-tree
+      // This strange set is because overmind has a special rule for the state tree path, that can throw a Error: proxy-state-tree
       state.displayStudentForm = studentToDisplay
         ? { ...studentToDisplay }
         : null;

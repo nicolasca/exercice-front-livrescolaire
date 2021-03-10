@@ -2,7 +2,7 @@
 
 ## Lancer l'application
 
-L'application a été créé avec create-react-app. Voici les quelques instructions pour la lancer:
+L'application a été créée avec create-react-app. Voici les quelques instructions pour la lancer:
 
 ```
 git clone https://github.com/nicolasca/exercice-front-livrescolaire.git
@@ -21,8 +21,8 @@ Pour un petit projet comme celui-ci, je voulais essayer **overmind** dont j'avai
 
 ### Style
 
-En raison du contexte de test technique, j'ai voulu n'utiliser aucune librairie de style pour éviter simplement l'utilisation de classes déjà toutes faites.  
-Concernant l'application, j'ai utilisé l'encapsulation avec les modules CSS.
+En raison du contexte de test technique, j'ai voulu prendre aucune librairie de style pour éviter simplement l'utilisation de classes déjà toutes faites.  
+Concernant l'application, j'ai mis en place l'encapsulation de classes avec les modules CSS.
 
 ## Axes d'amélioration:
 
